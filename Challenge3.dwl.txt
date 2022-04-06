@@ -1,0 +1,11 @@
+%dw 2.0
+output json
+var result = {"status" : "ok"}
+---
+result.status match{
+
+    case "ok" -> {"message": "Request successfully processed."}
+    case "failed" ->  {"message": "Please try again later."}
+    
+
+}

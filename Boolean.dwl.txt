@@ -1,0 +1,10 @@
+
+%dw 2.0
+output json
+---
+{
+  "string": typeOf("hello"),
+  "number": typeOf(123),
+  "boolean": typeOf(true)
+  
+}

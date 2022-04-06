@@ -1,0 +1,9 @@
+
+%dw 2.0
+output json
+var action = if (payload.price < 100) "buy" else if (payload.price > 150) "hold" else "sell"
+---
+{
+  price  : payload.price,
+  action : action
+}
